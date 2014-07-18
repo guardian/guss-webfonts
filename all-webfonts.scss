@@ -1,3 +1,12 @@
 @import '_webfonts';
 
-@include guss-webfonts();
+// Load all the fonts, excluding bold Egyptian Semibold and Text Egyptian
+@include guss-webfonts($exclude: (11, 12, 18, 19, 20, 21));
+
+// Text Egyptian bold (700) points to the medium font file
+@include guss-webfonts-single-declaration(20, 'bold');
+@include guss-webfonts-single-declaration(21, 'bold');
+
+// Egyptian ultrablack (font-weight: 900) points to the semibold font file
+@include guss-webfonts-single-declaration(11, 'ultrablack');
+@include guss-webfonts-single-declaration(12, 'ultrablack');

@@ -31,32 +31,22 @@ $guss-webfonts-path: 'webfonts/hinting-#{$guss-webfonts-hinting}-#{$guss-webfont
 
 
 // Human-readable Font-weights
-// the commented ones are not actually used at all in the set of Guardian font
 
 $guss-font-weights: (
-//  'thin':       100,
+    'thin':       100,
     'light':      200,
-//  'book':       300,
+    'book':       300,
     'regular':    400,
     'medium':     500,
     'semibold':   600,
     'bold':       700,
     'black':      800,
-//  'ultrablack': 900
+    'ultrablack': 900
 ) !default;
 
 
-// Machine-readable CSS font-weight
-//
-// @requires $guss-font-weights
-//
-// @param {String} $keyword - Human-readable keyword in $guss-font-weights
-//
-// @returns {Number} - CSS font-weight
-
-@function guss-font-weight($keyword) {
-    @return map-get($guss-font-weights, $keyword);
-}
+// Font registry
+// =============================================================================
 
 $guss-webfonts: (
      1:  ( family: 'Guardian Agate Sans 1 Web',      weight: 'bold',     style: 'normal' ),
@@ -96,7 +86,24 @@ $guss-webfonts: (
 ) !default;
 
 
-// Replace `$search` by `$replace` in `$string`.
+// Helpers
+// =============================================================================
+
+
+// Machine-readable CSS font-weight
+//
+// @requires $guss-font-weights
+//
+// @param {String} $keyword - Human-readable keyword in $guss-font-weights
+//
+// @returns {Number} - CSS font-weight
+
+@function guss-font-weight($keyword) {
+    @return map-get($guss-font-weights, $keyword);
+}
+
+
+// Replace `$search` by `$replace` in `$string`
 //
 // @param {String} $string - string to update
 // @param {String} $search - value to replace
@@ -168,20 +175,23 @@ $guss-webfonts: (
 
 
 // Compose webfont path
+// "My Font" is in the MyFont/ directory
+// "Extra" fonts are stored in $extras-directory
 //
 // @param {String} $font - font name
 //
-// @return {String}
+// @return {String} - Path to the font
 
 @function compose-webfont-path($font-family, $extra: false) {
-    $directory: if($extra, GuardianExtrasWeb, str-remove-white-space($font-family));
+    $extras-directory: GuardianExtrasWeb;
+    $directory: if($extra, $extras-directory, str-remove-white-space($font-family));
     $path: $guss-webfonts-path + $directory + '/';
 
     @return $path;
 }
 
 
-// Look for `$needle` in `$haystack`.
+// Look for `$needle` in `$haystack`
 //
 // @param {List}   $haystack - List to search in
 // @param {String} $needle - The string to look for
@@ -192,6 +202,9 @@ $guss-webfonts: (
     @return not not index($haystack, $needle);
 }
 
+
+// Mixins
+// =============================================================================
 
 // @font-face declaration
 //
@@ -223,27 +236,37 @@ $guss-webfonts: (
 // @font-face declaration for Guss webfonts
 //
 // @requires $guss-webfonts
+// @requires $guss-font-weights
 //
 // @param {Number} $id - ID of the font in $guss-webfonts
+// @param {String} $font-weight-override - weight, member of $guss-font-weights
 //
-// @outputs a font-face declaration
+// @outputs a @font-face declaration
 
-@mixin guss-webfonts-single-declaration($id) {
+@mixin guss-webfonts-single-declaration($id, $font-weight-override: false) {
     $font: map-get($guss-webfonts, $id);
     $font-filename: compose-webfont-filename(map-get($font, family), map-get($font, weight), map-get($font, style));
     $full-path: compose-webfont-path(map-get($font, family), map-has-key($font, extra));
+    $font-weight: guss-font-weight(if($font-weight-override, $font-weight-override, map-get($font, weight)));
 
     @include guss-at-font-face(
         $family: map-get($font, family),
         $filename: $font-filename,
         $path: $full-path,
-        $weight: guss-font-weight(map-get($font, weight)),
+        $weight: $font-weight,
         $style: map-get($font, style)
     );
 }
 
 
 // @font-face declaration for multiple Guss webfonts
+//
+// @param {Number|List} $include - ID of the font or list of fonts from
+//                                 $fonts to include
+// @param {List} $exclude - fonts to exclude
+// @param {Map} $fonts ($guss-webfonts) - registry of fonts
+//
+// @outputs one or multiple @font-face declarations
 //
 // @example scss - all @font-face rules
 // @include guss-webfonts();
@@ -261,7 +284,7 @@ $guss-webfonts: (
     @if type-of($include) == number {
         @include guss-webfonts-single-declaration($include);
     } @else {
-        @each $id, $font in $guss-webfonts {
+        @each $id, $font in $fonts {
             @if (contain($exclude, $id)) {
                 // Do nothing, this font was excluded
             } @else {
