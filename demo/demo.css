@@ -1,0 +1,149 @@
+html {
+  font-size: 20px;
+  line-height: 30px;
+  color: #333333;
+  margin-right: 1em;
+  margin-left: 1em; }
+
+body {
+  margin: 0 auto;
+  max-width: 620px; }
+
+[class*=family] {
+  margin: 1em 0 4em; }
+
+h1 {
+  font-family: 'Guardian Titlepiece Web'; }
+
+h2,
+h3 {
+  font-family: 'Guardian Egyptian Web';
+  font-weight: 200; }
+
+h2 {
+  border-top: 2px solid #dfdfdf;
+  padding-top: 4px; }
+
+h3 {
+  margin-top: 2em;
+  margin-bottom: .5em; }
+
+.family-GuardianAgateSans1Web {
+  font-family: "Guardian Agate Sans 1 Web"; }
+
+.family-GuardianAgateSans1Web {
+  font-family: "Guardian Agate Sans 1 Web"; }
+
+.family-GuardianAgateSans1Web {
+  font-family: "Guardian Agate Sans 1 Web"; }
+
+.family-GuardianAgateSans1Web {
+  font-family: "Guardian Agate Sans 1 Web"; }
+
+.family-GuardianEgyptianWeb {
+  font-family: "Guardian Egyptian Web"; }
+
+.family-GuardianEgyptianWeb {
+  font-family: "Guardian Egyptian Web"; }
+
+.family-GuardianEgyptianWeb {
+  font-family: "Guardian Egyptian Web"; }
+
+.family-GuardianEgyptianWeb {
+  font-family: "Guardian Egyptian Web"; }
+
+.family-GuardianEgyptianWeb {
+  font-family: "Guardian Egyptian Web"; }
+
+.family-GuardianEgyptianWeb {
+  font-family: "Guardian Egyptian Web"; }
+
+.family-GuardianEgyptianWeb {
+  font-family: "Guardian Egyptian Web"; }
+
+.family-GuardianEgyptianWeb {
+  font-family: "Guardian Egyptian Web"; }
+
+.family-GuardianSansWeb {
+  font-family: "Guardian Sans Web"; }
+
+.family-GuardianSansWeb {
+  font-family: "Guardian Sans Web"; }
+
+.family-GuardianSansWeb {
+  font-family: "Guardian Sans Web"; }
+
+.family-GuardianTextEgyptianWeb {
+  font-family: "Guardian Text Egyptian Web"; }
+
+.family-GuardianTextEgyptianWeb {
+  font-family: "Guardian Text Egyptian Web"; }
+
+.family-GuardianTextEgyptianWeb {
+  font-family: "Guardian Text Egyptian Web"; }
+
+.family-GuardianTextEgyptianWeb {
+  font-family: "Guardian Text Egyptian Web"; }
+
+.family-GuardianTextEgyptianWeb {
+  font-family: "Guardian Text Egyptian Web"; }
+
+.family-GuardianTextEgyptianWeb {
+  font-family: "Guardian Text Egyptian Web"; }
+
+.family-GuardianTextEgyptianWeb {
+  font-family: "Guardian Text Egyptian Web"; }
+
+.family-GuardianTextEgyptianWeb {
+  font-family: "Guardian Text Egyptian Web"; }
+
+.family-GuardianTextSansWeb {
+  font-family: "Guardian Text Sans Web"; }
+
+.family-GuardianTextSansWeb {
+  font-family: "Guardian Text Sans Web"; }
+
+.family-GuardianTextSansWeb {
+  font-family: "Guardian Text Sans Web"; }
+
+.family-GuardianTextSansWeb {
+  font-family: "Guardian Text Sans Web"; }
+
+.family-GuardianTextSansWeb {
+  font-family: "Guardian Text Sans Web"; }
+
+.family-GuardianTextSansWeb {
+  font-family: "Guardian Text Sans Web"; }
+
+.family-GuardianTextSansWeb {
+  font-family: "Guardian Text Sans Web"; }
+
+.family-GuardianTextSansWeb {
+  font-family: "Guardian Text Sans Web"; }
+
+.family-GuardianCompactWeb {
+  font-family: "Guardian Compact Web"; }
+
+.family-GuardianTitlepieceWeb {
+  font-family: "Guardian Titlepiece Web"; }
+
+.family-GuardianWeekendCondensedWeb {
+  font-family: "Guardian Weekend Condensed Web"; }
+
+.weight-light {
+  font-weight: 200; }
+
+.weight-regular {
+  font-weight: 400; }
+
+.weight-medium {
+  font-weight: 500; }
+
+.weight-semibold {
+  font-weight: 600; }
+
+.weight-bold {
+  font-weight: 700; }
+
+.weight-black {
+  font-weight: 800; }

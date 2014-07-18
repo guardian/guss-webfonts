@@ -1,0 +1,274 @@
+// =============================================================================
+// Guss Webfonts
+// =============================================================================
+
+// Configuration
+// =============================================================================
+
+// Charset
+//
+// - ascii: 256 characters only, very small
+// - latin1: latin 1 character set
+// - original: full character set
+
+$guss-webfonts-charset: 'original' !default;
+
+
+// Hinting {String}
+//
+// - on: larger file but better rendering in Windows
+// - off: smaller files, render well on HiDPI displays
+
+$guss-webfonts-hinting: 'on' !default;
+
+
+// Location
+//
+// URL can be an absolute HTTP ('//pasteup.guim.co.uk/fonts/') or relative ('../')
+
+$guss-webfonts-base-url: './' !default;
+$guss-webfonts-path: 'webfonts/hinting-#{$guss-webfonts-hinting}-#{$guss-webfonts-charset}/' !default;
+
+
+// Human-readable Font-weights
+// the commented ones are not actually used at all in the set of Guardian font
+
+$guss-font-weights: (
+//  'thin':       100,
+    'light':      200,
+//  'book':       300,
+    'regular':    400,
+    'medium':     500,
+    'semibold':   600,
+    'bold':       700,
+    'black':      800,
+//  'ultrablack': 900
+) !default;
+
+
+// Machine-readable CSS font-weight
+//
+// @requires $guss-font-weights
+//
+// @param {String} $keyword - Human-readable keyword in $guss-font-weights
+//
+// @returns {Number} - CSS font-weight
+
+@function guss-font-weight($keyword) {
+    @return map-get($guss-font-weights, $keyword);
+}
+
+$guss-webfonts: (
+     1:  ( family: 'Guardian Agate Sans 1 Web',      weight: 'bold',     style: 'normal' ),
+     2:  ( family: 'Guardian Agate Sans 1 Web',      weight: 'bold',     style: 'italic' ),
+     3:  ( family: 'Guardian Agate Sans 1 Web',      weight: 'regular',  style: 'normal' ),
+     4:  ( family: 'Guardian Agate Sans 1 Web',      weight: 'regular',  style: 'italic' ),
+     5:  ( family: 'Guardian Egyptian Web',          weight: 'bold',     style: 'normal' ),
+     6:  ( family: 'Guardian Egyptian Web',          weight: 'bold',     style: 'italic' ),
+     7:  ( family: 'Guardian Egyptian Web',          weight: 'light',    style: 'normal' ),
+     8:  ( family: 'Guardian Egyptian Web',          weight: 'medium',   style: 'normal' ),
+     9:  ( family: 'Guardian Egyptian Web',          weight: 'regular',  style: 'normal' ),
+     10: ( family: 'Guardian Egyptian Web',          weight: 'regular',  style: 'italic' ),
+     11: ( family: 'Guardian Egyptian Web',          weight: 'semibold', style: 'normal' ),
+     12: ( family: 'Guardian Egyptian Web',          weight: 'semibold', style: 'italic' ),
+     13: ( family: 'Guardian Sans Web',              weight: 'light',    style: 'normal' ),
+     14: ( family: 'Guardian Sans Web',              weight: 'regular',  style: 'normal' ),
+     15: ( family: 'Guardian Sans Web',              weight: 'semibold', style: 'normal' ),
+     16: ( family: 'Guardian Text Egyptian Web',     weight: 'black',    style: 'normal' ),
+     17: ( family: 'Guardian Text Egyptian Web',     weight: 'black',    style: 'italic' ),
+     18: ( family: 'Guardian Text Egyptian Web',     weight: 'bold',     style: 'normal' ),
+     19: ( family: 'Guardian Text Egyptian Web',     weight: 'bold',     style: 'italic' ),
+     20: ( family: 'Guardian Text Egyptian Web',     weight: 'medium',   style: 'normal' ),
+     21: ( family: 'Guardian Text Egyptian Web',     weight: 'medium',   style: 'italic' ),
+     22: ( family: 'Guardian Text Egyptian Web',     weight: 'regular',  style: 'normal' ),
+     23: ( family: 'Guardian Text Egyptian Web',     weight: 'regular',  style: 'italic' ),
+     24: ( family: 'Guardian Text Sans Web',         weight: 'black',    style: 'normal' ),
+     25: ( family: 'Guardian Text Sans Web',         weight: 'black',    style: 'italic' ),
+     26: ( family: 'Guardian Text Sans Web',         weight: 'bold',     style: 'normal' ),
+     27: ( family: 'Guardian Text Sans Web',         weight: 'bold',     style: 'italic' ),
+     28: ( family: 'Guardian Text Sans Web',         weight: 'medium',   style: 'normal' ),
+     29: ( family: 'Guardian Text Sans Web',         weight: 'medium',   style: 'italic' ),
+     30: ( family: 'Guardian Text Sans Web',         weight: 'regular',  style: 'normal' ),
+     31: ( family: 'Guardian Text Sans Web',         weight: 'regular',  style: 'italic' ),
+     32: ( family: 'Guardian Compact Web',           weight: 'black',    style: 'normal', extra: true ),
+     33: ( family: 'Guardian Titlepiece Web',        weight: 'regular',  style: 'normal', extra: true ),
+     34: ( family: 'Guardian Weekend Condensed Web', weight: 'black',    style: 'normal', extra: true )
+) !default;
+
+
+// Replace `$search` by `$replace` in `$string`.
+//
+// @param {String} $string - string to update
+// @param {String} $search - value to replace
+// @param {String} $replace ('') - new value
+//
+// @return {String}
+
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @while $index {
+      $string: str-slice($string, 1, $index - 1) + $replace + str-slice($string, $index + 1);
+      $index: str-index($string, $search);
+    }
+
+    @return $string;
+}
+
+
+// Remove white space in $string
+//
+// @param {String} $string - string to update
+//
+// @return {String}
+
+@function str-remove-white-space($string) {
+    $string: str-replace($string, ' ', '');
+
+    @return $string;
+}
+
+
+// Capitalise first letter of $string
+//
+// @param {String} $string - string to update
+//
+// @return {String}
+
+@function str-capitalise($string) {
+    $string: $string + unquote(''); // Make sure $string has a type of String
+    $first-letter: to-upper-case(str-slice($string, 0, 1));
+    $rest-of-string: str-slice($string, 2);
+
+    @return $first-letter + $rest-of-string;
+}
+
+
+// Compose webfont filename
+//
+// @param {String} $font-family - font family
+// @param {String} $weight - weight, member of $guss-font-weights
+// @param {String} $style - normal | italic
+//
+// @example scss
+// src: url('#{compose-webfont-filename('Guardian Text Sans Web', bold, italic)}.woff');
+// -> src: url("GuardianTextSansWeb-BoldItalic.eot");
+//
+// @return {String}
+
+@function compose-webfont-filename($font-family, $weight, $style) {
+    $style: if($style == normal, '', str-capitalise($style));
+    $weight: str-capitalise($weight);
+    $font: str-remove-white-space($font-family);
+
+    $filename: $font + '-' + $weight + $style;
+
+    @return $filename;
+}
+
+
+// Compose webfont path
+//
+// @param {String} $font - font name
+//
+// @return {String}
+
+@function compose-webfont-path($font-family, $extra: false) {
+    $directory: if($extra, GuardianExtrasWeb, str-remove-white-space($font-family));
+    $path: $guss-webfonts-path + $directory + '/';
+
+    @return $path;
+}
+
+
+// Look for `$needle` in `$haystack`.
+//
+// @param {List}   $haystack - List to search in
+// @param {String} $needle - The string to look for
+//
+// @return {Boolean}
+
+@function contain($haystack, $needle) {
+    @return not not index($haystack, $needle);
+}
+
+
+// @font-face declaration
+//
+// @param {String} $family - List to search in
+// @param {String} $file - The filename
+// @param {String} $base-path - Directory where the font is stored
+// @param {Number} $weight (400) - CSS font-weight
+// @param {String} $style (normal) - CSS font-style
+//
+// @outputs a @font-face declaration
+
+@mixin guss-at-font-face($family, $filename, $path, $weight: 400, $style: 'normal', $url: $guss-webfonts-base-url) {
+    @at-root {
+        @font-face {
+            font-family: $family;
+            src: url('#{$url + $path + $filename}.eot'); // IE9 Compat Modes
+            src: url('#{$url + $path + $filename}.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+                 url('#{$url + $path + $filename}.woff') format('woff'), // Modern Browsers
+                 url('#{$url + $path + $filename}.ttf') format('truetype'), // Safari, Android, iOS
+                 url('#{$url + $path + $filename}.svg##{str-remove-white-space($family)}') format('svg'); // Legacy iOS
+            font-weight: $weight;
+            font-style: unquote($style);
+            font-stretch: normal;
+        }
+    }
+}
+
+
+// @font-face declaration for Guss webfonts
+//
+// @requires $guss-webfonts
+//
+// @param {Number} $id - ID of the font in $guss-webfonts
+//
+// @outputs a font-face declaration
+
+@mixin guss-webfonts-single-declaration($id) {
+    $font: map-get($guss-webfonts, $id);
+    $font-filename: compose-webfont-filename(map-get($font, family), map-get($font, weight), map-get($font, style));
+    $full-path: compose-webfont-path(map-get($font, family), map-has-key($font, extra));
+
+    @include guss-at-font-face(
+        $family: map-get($font, family),
+        $filename: $font-filename,
+        $path: $full-path,
+        $weight: guss-font-weight(map-get($font, weight)),
+        $style: map-get($font, style)
+    );
+}
+
+
+// @font-face declaration for multiple Guss webfonts
+//
+// @example scss - all @font-face rules
+// @include guss-webfonts();
+//
+// @example scss - only Guardian Compact Web
+// @include guss-webfonts(32);
+//
+// @example scss - all Guardian Agate Sans weights/styles
+// @include guss-webfonts((1, 2, 3, 4));
+//
+// @example scss - all except Guardian Sans
+// @include guss-webfonts($exclude: (13, 14, 15));
+
+@mixin guss-webfonts($include: (), $exclude: (), $fonts: $guss-webfonts) {
+    @if type-of($include) == number {
+        @include guss-webfonts-single-declaration($include);
+    } @else {
+        @each $id, $font in $guss-webfonts {
+            @if (contain($exclude, $id)) {
+                // Do nothing, this font was excluded
+            } @else {
+                @if (length($include) == 0 or contain($include, $id)) {
+                    @include guss-webfonts-single-declaration($id);
+                }
+            }
+        }
+    }
+}
