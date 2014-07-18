@@ -8,8 +8,8 @@ at a user-facing URL.
 
 ## Quick start
 
-```
-bower install guss-webfonts --save
+```bash
+$ bower install guss-webfonts --save
 ```
 
 ### Point directly to the css
@@ -79,3 +79,11 @@ prototyping purposes but not serve them publicly on your own domain.
 
 For more information, read the attached Commercial Type End User License
 Agreement.
+
+
+## Acknowledgements
+
+Thanks to @HugoGiraudel for his help and the [string functions][sassystrings]
+in use in this project.
+
+[sassystrings]: https://github.com/HugoGiraudel/SassyStrings
