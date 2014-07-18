@@ -2,18 +2,19 @@ $guss-webfonts-base-url: '../';
 
 @import '../_webfonts';
 
+@include guss-webfonts();
+
 
 @mixin font-family-helper-classes {
     $current-font: null;
 
-    @each $id, $font in $guss-webfonts {
-        $family: map-get($font, family);
-        @if $family != $current-font {
-            .family-#{str-replace($family, " ", "")} {
-                font-family: $family;
+    @each $font-family, $properties in $guss-webfonts {
+        @if $font-family != $current-font {
+            .family-#{str-remove-white-space($font-family)} {
+                font-family: $font-family;
             }
         }
-        $current-font: $family !global;
+        $current-font: $font-family !global;
     }
 }
 @mixin weight-helper-classes {

@@ -21,15 +21,13 @@ $ bower install guss-webfonts --save
 
 ### Point directly to the css
 
-This will load all the Guardian webfonts, hinted, with the largest character
-set:
+This will load all the Guardian Next Gen webfonts, hinted, with the largest 
+character set available:
 
 ```html
-<link rel="stylesheet" href="bower_components/guss-webfonts/all-webfonts.css" type="text/css" />
+<link rel="stylesheet" href="bower_components/guss-webfonts/nextgen-webfonts.css" type="text/css" />
 ```
 
-Note that on Next Gen Web and Apps, Guardian Text Egyptian bold actually loads
-the medium weight of the font.
 
 ### …or import the file in Sass
 
@@ -60,75 +58,70 @@ $guss-webfonts-charset: 'original' !default;
 $guss-webfonts-hinting: 'on' !default;
 
 
-@import 'path/to/guss-webfonts/_webfonts.scss';
+@import 'path/to/guss-webfonts/_webfonts';
 ```
 
-#### 2. Output the @font-face declarations
+#### 2. Output @font-face rules
 
 ```scss
-// outputs all @font-face rules
+// Outputs @font-face rules for all the fonts licensed
+// to the Guardian for the web
 @include guss-webfonts();
 ```
 
-## Font selection
+## Curating a selection of web fonts
 
-Font properties are stored in the `$guss-webfonts` map.
+Font properties are stored in the `$guss-webfonts` map, in `_webfonts.config.scss`.
+
+You can curate your own list of @font-face rules like so:
 
 ```scss
-$guss-webfonts: (
-     1:  ( family: 'Guardian Agate Sans 1 Web',      weight: 'bold',     style: 'normal' ),
-     2:  ( family: 'Guardian Agate Sans 1 Web',      weight: 'bold',     style: 'italic' ),
-     3:  ( family: 'Guardian Agate Sans 1 Web',      weight: 'regular',  style: 'normal' ),
-     4:  ( family: 'Guardian Agate Sans 1 Web',      weight: 'regular',  style: 'italic' ),
-     5:  ( family: 'Guardian Egyptian Web',          weight: 'bold',     style: 'normal' ),
-     6:  ( family: 'Guardian Egyptian Web',          weight: 'bold',     style: 'italic' ),
-     7:  ( family: 'Guardian Egyptian Web',          weight: 'light',    style: 'normal' ),
-     8:  ( family: 'Guardian Egyptian Web',          weight: 'medium',   style: 'normal' ),
-     9:  ( family: 'Guardian Egyptian Web',          weight: 'regular',  style: 'normal' ),
-     10: ( family: 'Guardian Egyptian Web',          weight: 'regular',  style: 'italic' ),
-     11: ( family: 'Guardian Egyptian Web',          weight: 'semibold', style: 'normal' ),
-     12: ( family: 'Guardian Egyptian Web',          weight: 'semibold', style: 'italic' ),
-     13: ( family: 'Guardian Sans Web',              weight: 'light',    style: 'normal' ),
-     14: ( family: 'Guardian Sans Web',              weight: 'regular',  style: 'normal' ),
-     15: ( family: 'Guardian Sans Web',              weight: 'semibold', style: 'normal' ),
-     16: ( family: 'Guardian Text Egyptian Web',     weight: 'black',    style: 'normal' ),
-     17: ( family: 'Guardian Text Egyptian Web',     weight: 'black',    style: 'italic' ),
-     18: ( family: 'Guardian Text Egyptian Web',     weight: 'bold',     style: 'normal' ),
-     19: ( family: 'Guardian Text Egyptian Web',     weight: 'bold',     style: 'italic' ),
-     20: ( family: 'Guardian Text Egyptian Web',     weight: 'medium',   style: 'normal' ),
-     21: ( family: 'Guardian Text Egyptian Web',     weight: 'medium',   style: 'italic' ),
-     22: ( family: 'Guardian Text Egyptian Web',     weight: 'regular',  style: 'normal' ),
-     23: ( family: 'Guardian Text Egyptian Web',     weight: 'regular',  style: 'italic' ),
-     24: ( family: 'Guardian Text Sans Web',         weight: 'black',    style: 'normal' ),
-     25: ( family: 'Guardian Text Sans Web',         weight: 'black',    style: 'italic' ),
-     26: ( family: 'Guardian Text Sans Web',         weight: 'bold',     style: 'normal' ),
-     27: ( family: 'Guardian Text Sans Web',         weight: 'bold',     style: 'italic' ),
-     28: ( family: 'Guardian Text Sans Web',         weight: 'medium',   style: 'normal' ),
-     29: ( family: 'Guardian Text Sans Web',         weight: 'medium',   style: 'italic' ),
-     30: ( family: 'Guardian Text Sans Web',         weight: 'regular',  style: 'normal' ),
-     31: ( family: 'Guardian Text Sans Web',         weight: 'regular',  style: 'italic' ),
-     32: ( family: 'Guardian Compact Web',           weight: 'black',    style: 'normal', extra: true ),
-     33: ( family: 'Guardian Titlepiece Web',        weight: 'regular',  style: 'normal', extra: true ),
-     34: ( family: 'Guardian Weekend Condensed Web', weight: 'black',    style: 'normal', extra: true )
+// Only Guardian Agate Sans 1 Web
+
+@include guss-webfonts('Guardian Agate Sans 1 Web');
+
+
+// Guardian Agate Sans 1 Web and Guardian Sans Web
+
+@include guss-webfonts('Guardian Agate Sans 1 Web' 'Guardian Sans Web');
+
+
+// For Guardian Next Gen products, we use this configuration:
+
+@include guss-webfonts(
+    (
+        'Guardian Agate Sans 1 Web': (
+            (weight: 'regular', style: 'normal'),
+        ),
+        'Guardian Text Egyptian Web': (
+            (weight: 'regular',  style: 'normal'),
+            (weight: 'regular',  style: 'italic'),
+            (weight: 'medium',   style: 'normal', use-as: (weight: 'bold', style: 'normal')),
+            (weight: 'medium',   style: 'italic', use-as: (weight: 'bold', style: 'italic')),
+        ),
+        'Guardian Egyptian Web': (
+            (weight: 'light',    style: 'normal'),
+            (weight: 'regular',    style: 'normal'),
+            (weight: 'semibold', style: 'normal', use-as: (weight: 'ultrablack', style: 'normal')),
+        ),
+        'Guardian Text Sans Web': (
+            (weight: 'regular',  style: 'normal'),
+            (weight: 'regular',  style: 'italic'),
+            (weight: 'medium',   style: 'normal', use-as: (weight: 'bold', style: 'normal')),
+            (weight: 'medium',   style: 'italic', use-as: (weight: 'bold', style: 'italic')),
+        ),
+        'Guardian Sans Web': (
+            (weight: 'light',    style: 'normal'),
+        )
+    )
 );
-```
-
-You can curate your own list of @font-face declarations like so:
-
-```scss
-// only Guardian Compact Web
-@include guss-webfonts(32);
-
-// all Guardian Agate Sans weights/styles
-@include guss-webfonts((1, 2, 3, 4));
-
-// all except Guardian Sans
-@include guss-webfonts($exclude: (13, 14, 15));
 ```
 
 ## Acknowledgements
 
 Thanks to @HugoGiraudel for his help and the [string functions][sassystrings]
 in use in this project.
+
+Thanks to @paulrobertlloyd for his input on the API.
 
 [sassystrings]: https://github.com/HugoGiraudel/SassyStrings
