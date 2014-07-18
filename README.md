@@ -2,9 +2,16 @@
 
 Guardian Webfonts for your prototyping needs.
 
-Important: use these fonts in production at your own risk!  
 Read the End User License Agreement before deploying any of these fonts
 at a user-facing URL.
+
+These fonts are the property of Commercial Type.
+
+The font files are for internal use exclusively. You may use them for
+prototyping purposes but not serve them publicly on your own domain
+unless you have a license for it.
+
+For more information, read the Commercial Type End User License Agreement.
 
 ## Quick start
 
@@ -53,7 +60,6 @@ $guss-webfonts-hinting: 'on' !default;
 @import 'path/to/guss-webfonts/_webfonts.scss';
 ```
 
-
 #### 2. Output the @font-face declarations
 
 ```scss
@@ -69,17 +75,6 @@ $guss-webfonts-hinting: 'on' !default;
 // all except Guardian Sans
 @include guss-webfonts($exclude: (13, 14, 15));
 ```
-
-## License and usage
-
-These fonts are the property of Commercial Type.
-
-The font files are for internal use exclusively. You may use them for
-prototyping purposes but not serve them publicly on your own domain.
-
-For more information, read the attached Commercial Type End User License
-Agreement.
-
 
 ## Acknowledgements
 
