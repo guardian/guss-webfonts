@@ -23,7 +23,7 @@ set:
 
 ### …or import the file in Sass
 
-1. Configure and import guss-webfonts
+#### 1. Configure and import guss-webfonts
 
 ```scss
 // HTTP path or url where the browser will look for fonts
@@ -54,7 +54,7 @@ $guss-webfonts-hinting: 'on' !default;
 ```
 
 
-2. Output the @font-face declarations
+#### 2. Output the @font-face declarations
 
 ```scss
 // all @font-face rules
