@@ -101,7 +101,7 @@ You can curate your own list of @font-face rules like so:
         ),
         'Guardian Egyptian Web': (
             (weight: 'light',    style: 'normal'),
-            (weight: 'regular',    style: 'normal'),
+            (weight: 'regular',  style: 'normal'),
             (weight: 'semibold', style: 'normal', use-as: (weight: 'ultrablack', style: 'normal')),
         ),
         'Guardian Text Sans Web': (
