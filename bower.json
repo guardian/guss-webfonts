@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Guardian web fonts, for your prototyping needs",
   "main": [
-      "all-webfonts.css",
+      "nextgen-webfonts.css",
       "_webfonts.scss"
   ],
   "license": "Apache 2.0",
