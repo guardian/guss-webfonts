@@ -81,12 +81,12 @@
  * @requires {mixin} guss-webfonts
  */
 @mixin guss-webfonts($fonts: $guss-webfonts, $registry: $guss-webfonts) {
-    @if type-of($fonts) == "string" {
+    @if type-of($fonts) == 'string' {
         @each $properties in map-get($registry, $fonts) {
             @include guss-webfonts-single-declaration($fonts, $properties);
         }
     } @else {
-        @if type-of($fonts) == "list" {
+        @if type-of($fonts) == 'list' {
             @each $font in $fonts {
                 @include guss-webfonts($font);
             }
