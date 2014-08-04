@@ -68,8 +68,8 @@ $guss-font-weights: (
 ) !default;
 
 
-// Extra fonts
-// =============================================================================
+/* Extra fonts
+   ========================================================================== */
 
 /**
  * Extra fonts directory
@@ -85,11 +85,11 @@ $guss-extras-directory: 'GuardianExtrasWeb' !default;
  */
 $guss-webfonts-extras: 'Guardian Compact Web',
                        'Guardian Titlepiece Web',
-                       'Guardian Weekend Condensed Web' !default;
+                       'Guardian Weekend Cond Web' !default;
 
 
-// Font registry
-// =============================================================================
+/* Font registry
+   ========================================================================== */
 
 /**
  * Font registry
@@ -144,7 +144,7 @@ $guss-webfonts: (
     'Guardian Titlepiece Web': (
         (weight: 'regular', style: 'normal'),
     ),
-    'Guardian Weekend Condensed Web': (
+    'Guardian Weekend Cond Web': (
         (weight: 'black', style: 'normal'),
     )
 ) !default;
