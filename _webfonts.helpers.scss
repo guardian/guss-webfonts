@@ -5,6 +5,9 @@
  * 
  * @requires {variable} guss-font-weights
  *
+ * @example scss
+ * font-weight: guss-font-weight(light);
+ *
  * @return {Number} - CSS font-weight
  */
 @function guss-font-weight($keyword) {
