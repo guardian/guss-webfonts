@@ -15,9 +15,18 @@ For more information, read the Commercial Type End User License Agreement.
 
 ## Quick start
 
+### Install the Sass helpers
+
 ```bash
 $ bower install guss-webfonts --save
 ```
+
+### Add the required fonts files to your project
+
+1. [Manually download the repository](https://github.com/guardian/guss-webfonts/archive/master.zip)
+2. Decompress the archive
+3. Copy all or part of the `webfonts` directory to `bower_components/guss-webfonts/webfonts`
+   depending on what fonts your project needs
 
 ### Point directly to the css
 
