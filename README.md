@@ -113,6 +113,7 @@ You can curate your own list of @font-face rules like so:
     (
         'Guardian Agate Sans 1 Web': (
             (weight: 'regular', style: 'normal'),
+            (weight: 'bold',    style: 'normal'),
         ),
         'Guardian Text Egyptian Web': (
             (weight: 'regular',  style: 'normal'),
@@ -132,7 +133,7 @@ You can curate your own list of @font-face rules like so:
             (weight: 'medium',   style: 'italic', use-as: (weight: 'bold', style: 'italic')),
         ),
         'Guardian Sans Web': (
-            (weight: 'light',    style: 'normal'),
+            (weight: 'regular',  style: 'normal'),
         )
     )
 );
