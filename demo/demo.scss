@@ -1,7 +1,8 @@
+$guss-webfonts-base-url: '//pasteup.guim.co.uk/fonts/';
+
 @import '../src/_webfonts';
 
 @include guss-webfonts();
-
 
 @mixin font-family-helper-classes {
     $current-font: null;
