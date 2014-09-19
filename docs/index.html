@@ -1,0 +1,4151 @@
+<!doctype html>
+
+
+
+
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8" />
+
+<title>SassDoc</title>
+<link rel="stylesheet" href="assets/css/main.css" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width">
+<meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
+
+<!-- Thanks to Sass-lang.com for the icons -->
+<link href="http://sass-lang.com/favicon.ico" rel="shortcut icon">
+
+</head>
+<body>
+
+  
+  <aside class="sidebar" role="nav">
+    
+  <div class="sidebar__header">
+  <h1 class="sidebar__title">
+    
+      SassDoc
+    
+  </h1>
+</div>
+
+<div class="sidebar__body">
+  
+  
+
+    
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="webfonts"><a href="#webfonts">webfonts</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="webfonts-variable"><a href="#webfonts-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-charset" data-type="variable">
+              <a href="#variable-guss-webfonts-charset">guss-webfonts-charset
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-hinting" data-type="variable">
+              <a href="#variable-guss-webfonts-hinting">guss-webfonts-hinting
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-kerning" data-type="variable">
+              <a href="#variable-guss-webfonts-kerning">guss-webfonts-kerning
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-base-url" data-type="variable">
+              <a href="#variable-guss-webfonts-base-url">guss-webfonts-base-url
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-path" data-type="variable">
+              <a href="#variable-guss-webfonts-path">guss-webfonts-path
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-font-weights" data-type="variable">
+              <a href="#variable-guss-font-weights">guss-font-weights
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-extras-directory" data-type="variable">
+              <a href="#variable-guss-extras-directory">guss-extras-directory
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-extras" data-type="variable">
+              <a href="#variable-guss-webfonts-extras">guss-webfonts-extras
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts" data-type="variable">
+              <a href="#variable-guss-webfonts">guss-webfonts
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="webfonts-function"><a href="#webfonts-function">functions</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="guss-font-weight" data-type="function">
+              <a href="#function-guss-font-weight">guss-font-weight
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="is-extra" data-type="function">
+              <a href="#function-is-extra">is-extra
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="str-replace" data-type="function">
+              <a href="#function-str-replace">str-replace
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="str-remove-white-space" data-type="function">
+              <a href="#function-str-remove-white-space">str-remove-white-space
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="str-capitalise" data-type="function">
+              <a href="#function-str-capitalise">str-capitalise
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="compose-webfont-filename" data-type="function">
+              <a href="#function-compose-webfont-filename">compose-webfont-filename
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="compose-webfont-path" data-type="function">
+              <a href="#function-compose-webfont-path">compose-webfont-path
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="contain" data-type="function">
+              <a href="#function-contain">contain
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="webfonts-mixin"><a href="#webfonts-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="guss-at-font-face" data-type="mixin">
+              <a href="#mixin-guss-at-font-face">guss-at-font-face
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-single-declaration" data-type="mixin">
+              <a href="#mixin-guss-webfonts-single-declaration">guss-webfonts-single-declaration
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts" data-type="mixin">
+              <a href="#mixin-guss-webfonts">guss-webfonts
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+  
+</div>
+
+
+  </aside>
+
+  
+  <article class="main" role="main">
+
+    
+    <header class="header" role="banner">
+  <div class="container">
+  
+
+    <div class="sassdoc__searchbar  searchbar">
+       <label for="js-search-input" class="visually-hidden">Search</label>
+       <div class="searchbar__form" id="js-search">
+         <input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search" />
+         <ul class="searchbar__suggestions" id="js-search-suggestions"></ul>
+       </div>
+     </div>
+  </div>
+</header>
+
+
+    <div class="container">
+    
+
+  
+  
+
+    
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="webfonts">webfonts</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="webfonts-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-guss-webfonts-charset">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-webfonts-charset">guss-webfonts-charset</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-webfonts-charset: 'original' !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Charset</p>
+<ul>
+<li>ascii: 256 characters only, very small</li>
+<li>latin1: latin 1 character set</li>
+<li>original: full character set</li>
+</ul>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-guss-webfonts-hinting">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-webfonts-hinting">guss-webfonts-hinting</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-webfonts-hinting: 'on' !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Hinting</p>
+<ul>
+<li>on: larger file, better rendering in Windows</li>
+<li><p>off: smaller files, render well on HiDPI displays</p>
+<p>@type String</p>
+</li>
+</ul>
+</div>
+
+
+  
+    
+    
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-guss-webfonts-kerning">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-webfonts-kerning">guss-webfonts-kerning</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-webfonts-kerning: 'on' !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Kerning</p>
+<ul>
+<li>on: larger file, better rendering</li>
+<li><p>off: smaller files</p>
+<p>@type String</p>
+</li>
+</ul>
+</div>
+
+
+  
+    
+    
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-guss-webfonts-base-url">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-webfonts-base-url">guss-webfonts-base-url</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-webfonts-base-url: './' !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Base URL
+URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relative (<code>../</code>)</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-guss-at-font-face"><code>guss-at-font-face</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-guss-webfonts-path">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-webfonts-path">guss-webfonts-path</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-webfonts-path: 'webfonts/hinting-#{$guss-webfonts-hinting}_kerning-#{$guss-webfonts-kerning}/#{$guss-webfonts-charset}/' !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Complete path</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-guss-webfonts-charset"><code>guss-webfonts-charset</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-guss-webfonts-hinting"><code>guss-webfonts-hinting</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-guss-webfonts-kerning"><code>guss-webfonts-kerning</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-compose-webfont-path"><code>compose-webfont-path</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-guss-font-weights">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-font-weights">guss-font-weights</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-font-weights: (
+    'thin':       100,
+    'light':      200,
+    'book':       300,
+    'regular':    400,
+    'medium':     500,
+    'semibold':   600,
+    'bold':       700,
+    'black':      800,
+    'ultrablack': 900
+) !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Human-readable Font-weights</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Map</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-guss-font-weight"><code>guss-font-weight</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-guss-extras-directory">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-extras-directory">guss-extras-directory</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-extras-directory: 'GuardianExtrasWeb' !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Extra fonts directory</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-compose-webfont-path"><code>compose-webfont-path</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-guss-webfonts-extras">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-webfonts-extras">guss-webfonts-extras</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-webfonts-extras: 'Guardian Compact Web',
+                       'Guardian Titlepiece Web',
+                       'Guardian Weekend Cond Web' !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Extra fonts list</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>List</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-is-extra"><code>is-extra</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-guss-webfonts">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-webfonts">guss-webfonts</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-webfonts: (
+    'Guardian Agate Sans 1 Web': (
+        (weight: 'regular', style: 'normal'),
+        (weight: 'regular', style: 'italic'),
+        (weight: 'bold', style: 'normal'),
+        (weight: 'bold', style: 'italic'),
+    ),
+    'Guardian Egyptian Web': (
+        (weight: 'light', style: 'normal'),
+        (weight: 'regular', style: 'normal'),
+        (weight: 'regular', style: 'italic'),
+        (weight: 'semibold', style: 'normal'),
+        (weight: 'semibold', style: 'italic'),
+        (weight: 'medium', style: 'normal'),
+        (weight: 'bold', style: 'normal'),
+        (weight: 'bold', style: 'italic'),
+    ),
+    'Guardian Sans Web': (
+        (weight: 'light', style: 'normal'),
+        (weight: 'regular', style: 'normal'),
+        (weight: 'semibold', style: 'normal'),
+    ),
+    'Guardian Text Egyptian Web': (
+        (weight: 'regular', style: 'normal'),
+        (weight: 'regular', style: 'italic'),
+        (weight: 'medium', style: 'normal'),
+        (weight: 'medium', style: 'italic'),
+        (weight: 'bold', style: 'normal'),
+        (weight: 'bold', style: 'italic'),
+        (weight: 'black', style: 'normal'),
+        (weight: 'black', style: 'italic'),
+    ),
+    'Guardian Text Sans Web': (
+        (weight: 'regular', style: 'normal'),
+        (weight: 'regular', style: 'italic'),
+        (weight: 'medium', style: 'normal'),
+        (weight: 'medium', style: 'italic'),
+        (weight: 'bold', style: 'normal'),
+        (weight: 'bold', style: 'italic'),
+        (weight: 'black', style: 'normal'),
+        (weight: 'black', style: 'italic'),
+    ),
+    'Guardian Compact Web': (
+        (weight: 'black', style: 'normal'),
+    ),
+    'Guardian Titlepiece Web': (
+        (weight: 'regular', style: 'normal'),
+    ),
+    'Guardian Weekend Cond Web': (
+        (weight: 'black', style: 'normal'),
+    )
+) !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Font registry</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Map</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-guss-webfonts-single-declaration"><code>guss-webfonts-single-declaration</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-guss-webfonts"><code>guss-webfonts</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="webfonts-function">
+              <h2 class="main__heading--secondary">functions</h2>
+
+              
+              
+                <section class="main__item  item" id="function-guss-font-weight">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-guss-font-weight">guss-font-weight</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function guss-font-weight($keyword) { 
+    @return map-get($guss-font-weights, $keyword);
+ }"
+    data-collapsed="@function guss-font-weight($keyword) { ... }"><code>@function guss-font-weight($keyword) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Machine-readable CSS font-weight.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$keyword</code></th>
+          <td data-label="desc"><p>Human-readable keyword in $guss-font-weights</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description"><p>CSS font-weight</p>
+
+  
+    Number
+  
+  </p>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">font-weight: guss-font-weight(light);</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-guss-font-weights"><code>guss-font-weights</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-guss-webfonts-single-declaration"><code>guss-webfonts-single-declaration</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-is-extra">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-is-extra">is-extra</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function is-extra($font-family) { 
+    @return contain($guss-webfonts-extras, $font-family);
+ }"
+    data-collapsed="@function is-extra($font-family) { ... }"><code>@function is-extra($font-family) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Is this font stored in <code>$guss-extras-directory</code>?</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$font-family</code></th>
+          <td data-label="desc"><p>Font to look for</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    Bool
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-guss-webfonts-extras"><code>guss-webfonts-extras</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-str-replace">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-str-replace">str-replace</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function str-replace($string, $search, $replace: &#39;&#39;) { 
+    $index: str-index($string, $search);
+
+    @while $index {
+        $string: str-slice($string, 1, $index - 1) + $replace + str-slice($string, $index + 1);
+        $index: str-index($string, $search);
+    }
+
+    @return $string;
+ }"
+    data-collapsed="@function str-replace($string, $search, $replace: &#39;&#39;) { ... }"><code>@function str-replace($string, $search, $replace: &#39;&#39;) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Replace <code>$search</code> by <code>$replace</code> in <code>$string</code>.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$string</code></th>
+          <td data-label="desc"><p>string to update</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$search</code></th>
+          <td data-label="desc"><p>value to replace</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$replace</code></th>
+          <td data-label="desc"><p>new value</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>&#39;&#39;</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    String
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-str-remove-white-space"><code>str-remove-white-space</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Hugo Giraudel</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-str-remove-white-space">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-str-remove-white-space">str-remove-white-space</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function str-remove-white-space($string) { 
+    @return str-replace($string, &#39; &#39;, &#39;&#39;);
+ }"
+    data-collapsed="@function str-remove-white-space($string) { ... }"><code>@function str-remove-white-space($string) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Remove white space in $string</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$string</code></th>
+          <td data-label="desc"><p>string to update</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    String
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-str-replace"><code>str-replace</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-compose-webfont-filename"><code>compose-webfont-filename</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#function-compose-webfont-path"><code>compose-webfont-path</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-str-capitalise">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-str-capitalise">str-capitalise</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function str-capitalise($string) { 
+    $string: $string + unquote(&#39;&#39;); // Make sure $string has a type of String
+    $first-letter: to-upper-case(str-slice($string, 0, 1));
+    $rest-of-string: str-slice($string, 2);
+
+    @return $first-letter + $rest-of-string;
+ }"
+    data-collapsed="@function str-capitalise($string) { ... }"><code>@function str-capitalise($string) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Capitalise first letter of $string</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$string</code></th>
+          <td data-label="desc"><p>string to update</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    String
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#function-compose-webfont-filename"><code>compose-webfont-filename</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-compose-webfont-filename">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-compose-webfont-filename">compose-webfont-filename</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function compose-webfont-filename($font-family, $weight, $style) { 
+    $style: if($style == normal, &#39;&#39;, str-capitalise($style));
+    $weight: str-capitalise($weight);
+    $font: str-remove-white-space($font-family);
+
+    $filename: $font + &#39;-&#39; + $weight + $style;
+
+    @return $filename;
+ }"
+    data-collapsed="@function compose-webfont-filename($font-family, $weight, $style) { ... }"><code>@function compose-webfont-filename($font-family, $weight, $style) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Compose webfont filename</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$font-family</code></th>
+          <td data-label="desc"><p>font family</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$weight</code></th>
+          <td data-label="desc"><p>weight, member of $guss-font-weights</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$style</code></th>
+          <td data-label="desc"><p>normal | italic</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    String
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#function-str-capitalise"><code>str-capitalise</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-str-remove-white-space"><code>str-remove-white-space</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-guss-webfonts-single-declaration"><code>guss-webfonts-single-declaration</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-compose-webfont-path">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-compose-webfont-path">compose-webfont-path</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function compose-webfont-path($font-family) { 
+    $directory: if(is-extra($font-family), $guss-extras-directory, str-remove-white-space($font-family));
+    $path: $guss-webfonts-path + $directory + &#39;/&#39;;
+
+    @return $path;
+ }"
+    data-collapsed="@function compose-webfont-path($font-family) { ... }"><code>@function compose-webfont-path($font-family) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Compose webfont path
+&quot;My Font&quot; is in the MyFont/ directory
+&quot;Extra&quot; fonts are stored in <code>$guss-extras-directory</code>.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$font-family</code></th>
+          <td data-label="desc"><p>font name</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description"><p>Path to the font</p>
+
+  
+    String
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-guss-extras-directory"><code>guss-extras-directory</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-str-remove-white-space"><code>str-remove-white-space</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-guss-webfonts-single-declaration"><code>guss-webfonts-single-declaration</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-contain">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-contain">contain</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function contain($haystack, $needle) { 
+    @return not not index($haystack, $needle);
+ }"
+    data-collapsed="@function contain($haystack, $needle) { ... }"><code>@function contain($haystack, $needle) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Look for <code>$needle</code> in <code>$haystack</code>.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$haystack</code></th>
+          <td data-label="desc"><p>List to search in</p>
+</td>
+          <td data-label="type">
+          
+            List
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$needle</code></th>
+          <td data-label="desc"><p>The string to look for</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Returns</h3>
+
+  <p class="sassdoc__item-description">
+  
+    Bool
+  
+  </p>
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="webfonts-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
+              
+                <section class="main__item  item" id="mixin-guss-at-font-face">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-guss-at-font-face">guss-at-font-face</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin guss-at-font-face($family, $file, $base-path, $weight: 400, $style: normal, $url: $guss-webfonts-base-url) { 
+    @at-root {
+        @font-face {
+            font-family: $family;
+            src: url(&#39;#{$url + $path + $filename}.eot&#39;); // IE9 Compat Modes
+            src: url(&#39;#{$url + $path + $filename}.eot?#iefix&#39;) format(&#39;embedded-opentype&#39;), // IE6-IE8
+                 url(&#39;#{$url + $path + $filename}.woff2&#39;) format(&#39;woff2&#39;), // Very Modern Browsers
+                 url(&#39;#{$url + $path + $filename}.woff&#39;) format(&#39;woff&#39;), // Modern Browsers
+                 url(&#39;#{$url + $path + $filename}.ttf&#39;) format(&#39;truetype&#39;), // Safari, Android, iOS
+                 url(&#39;#{$url + $path + $filename}.svg##{$filename}&#39;) format(&#39;svg&#39;); // Legacy iOS
+            font-weight: $weight;
+            font-style: unquote($style);
+            font-stretch: normal;
+        }
+    }
+ }"
+    data-collapsed="@mixin guss-at-font-face($family, $file, $base-path, $weight: 400, $style: normal, $url: $guss-webfonts-base-url) { ... }"><code>@mixin guss-at-font-face($family, $file, $base-path, $weight: 400, $style: normal, $url: $guss-webfonts-base-url) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Output a @font-face declaration at root level.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$family</code></th>
+          <td data-label="desc"><p>List to search in</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$file</code></th>
+          <td data-label="desc"><p>The filename</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$base-path</code></th>
+          <td data-label="desc"><p>Directory where the font is stored</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$weight</code></th>
+          <td data-label="desc"><p>CSS font-weight</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            <code>400</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$style</code></th>
+          <td data-label="desc"><p>CSS font-style</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$url</code></th>
+          <td data-label="desc"><p>URL</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$guss-webfonts-base-url</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-guss-webfonts-base-url"><code>guss-webfonts-base-url</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-guss-webfonts-single-declaration"><code>guss-webfonts-single-declaration</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-guss-webfonts-single-declaration">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-guss-webfonts-single-declaration">guss-webfonts-single-declaration</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin guss-webfonts-single-declaration($font-family, $properties, $overrides) { 
+    $font: map-get($guss-webfonts, $font-family);
+    $font-weight-override: map-get($overrides, weight);
+    $font-style-override: map-get($overrides, style);
+
+    $font-filename: compose-webfont-filename($font-family, map-get($properties, weight), map-get($properties, style));
+    $full-path: compose-webfont-path($font-family);
+    $font-weight: guss-font-weight(if($font-weight-override, $font-weight-override, map-get($properties, weight)));
+    $font-style: if($font-style-override, $font-style-override, map-get($properties, style));
+
+    @include guss-at-font-face(
+        $family: $font-family,
+        $filename: $font-filename,
+        $path: $full-path,
+        $weight: $font-weight,
+        $style: $font-style
+    );
+ }"
+    data-collapsed="@mixin guss-webfonts-single-declaration($font-family, $properties, $overrides) { ... }"><code>@mixin guss-webfonts-single-declaration($font-family, $properties, $overrides) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Output the @font-face declaration for a Guss webfont.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$font-family</code></th>
+          <td data-label="desc"><p>ID of the font in $guss-webfonts</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$properties</code></th>
+          <td data-label="desc"><p>weight (member of <code>$guss-font-weights</code>), style (<code>normal</code> | <code>italic</code>)</p>
+</td>
+          <td data-label="type">
+          
+            Map
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$overrides</code></th>
+          <td data-label="desc"><p>weight (member of <code>$guss-font-weights</code>), style (<code>normal</code> | <code>italic</code>)</p>
+</td>
+          <td data-label="type">
+          
+            Map
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-guss-webfonts"><code>guss-webfonts</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-compose-webfont-filename"><code>compose-webfont-filename</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-compose-webfont-path"><code>compose-webfont-path</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#function-guss-font-weight"><code>guss-font-weight</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-guss-at-font-face"><code>guss-at-font-face</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-guss-webfonts"><code>guss-webfonts</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-guss-webfonts">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-guss-webfonts">guss-webfonts</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin guss-webfonts($fonts: $guss-webfonts, $registry: $guss-webfonts) { 
+    @if type-of($fonts) == &#39;string&#39; {
+        @each $properties in map-get($registry, $fonts) {
+            @include guss-webfonts-single-declaration($fonts, $properties);
+        }
+    } @else {
+        @if type-of($fonts) == &#39;list&#39; {
+            @each $font in $fonts {
+                @include guss-webfonts($font);
+            }
+        } @else {
+            @each $font-family, $font-property-sets in $fonts {
+                @each $properties in $font-property-sets {
+                    @if map-has-key($properties, use-as) {
+                        @include guss-webfonts-single-declaration($font-family, $properties, map-get($properties, use-as));
+                    } @else {
+                        @include guss-webfonts-single-declaration($font-family, $properties);
+                    }
+                }
+            }
+        }
+    }
+ }"
+    data-collapsed="@mixin guss-webfonts($fonts: $guss-webfonts, $registry: $guss-webfonts) { ... }"><code>@mixin guss-webfonts($fonts: $guss-webfonts, $registry: $guss-webfonts) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Output the @font-face declaration for Guss webfonts.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$fonts</code></th>
+          <td data-label="desc"><p>Fonts to output</p>
+</td>
+          <td data-label="type">
+          
+            String, List, Map
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$guss-webfonts</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$registry</code></th>
+          <td data-label="desc"><p>Font registry</p>
+</td>
+          <td data-label="type">
+          
+            Map
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$guss-webfonts</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-guss-webfonts"><code>guss-webfonts</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-guss-webfonts-single-declaration"><code>guss-webfonts-single-declaration</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#mixin-guss-webfonts"><code>guss-webfonts</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-guss-webfonts"><code>guss-webfonts</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+
+  
+
+
+    </div>
+
+    
+    
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      
+        <div class="footer__project-info  project-info">
+          <!-- Name and URL -->
+          
+            <span class="project-info__name">SassDoc</span>
+          
+
+          <!-- Version -->
+          
+
+          <!-- License -->
+          
+        </div>
+      
+
+      
+        <span class="footer__watermark">Built with <a href="https://github.com/SassDoc/sassdoc">SassDoc</a>.</span>
+      
+    </div>
+  </footer>
+
+
+  </article>
+
+
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="assets/js/main.min.js"></script>
+
+</body>
+</html>
