@@ -30,7 +30,7 @@ $ bower install guss-webfonts --save
 
 ### Point directly to the css
 
-This will load all the Guardian Next Gen webfonts, hinted, with the largest 
+This will load all the Guardian Next Gen webfonts, hinted, with the largest
 character set available:
 
 ```html
@@ -137,6 +137,14 @@ You can curate your own list of @font-face rules like so:
         )
     )
 );
+```
+
+## Uploading fonts
+
+Update the version number in the [Gruntfile](Gruntfile.js). Then
+
+```
+$ grunt release:fonts --id=AWS_ACCESS_KEY --secret=AWS_SECRET_KEY
 ```
 
 ## Acknowledgements

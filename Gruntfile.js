@@ -10,9 +10,8 @@ module.exports = function(grunt) {
                     accessKeyId: grunt.option('id'),
                     secretAccessKey: grunt.option('secret'),
                     region: 'eu-west-1',
-                    uploadConcurrency: 5,
-                    downloadConcurrency: 5,
                     bucket: 'pasteup-prod',
+                    uploadConcurrency: 5,
                     differential: true,
                     displayChangesOnly: true,
                     access: '',
@@ -34,8 +33,5 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('release:fonts', function (type) {
-        var releaseTarget = type ? ':' + type : '';
-        grunt.task.run(['build', 'git-release' + releaseTarget, 'clean:docs', 'hologram:buttons', 'gh-pages:docs']);
-    });
+    grunt.registerTask('release:fonts', ['aws_s3:pasteup']);
 };
