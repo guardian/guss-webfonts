@@ -9,6 +9,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-scss-lint');
 
     grunt.initConfig({
+        // if you update this, don't forget to update ./src/_webfonts.config.scss#L18
         fontsVersion: '0.1.0',
 
         clean: {
