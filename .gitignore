@@ -1,3 +1,6 @@
+.grunt
 .sass-cache
 
+demo/demo.css
+docs
 node_modules

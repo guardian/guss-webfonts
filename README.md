@@ -13,6 +13,9 @@ unless you have a license for it.
 
 For more information, read the Commercial Type End User License Agreement.
 
+[Read the docs](http://guardian.github.io/guss-webfonts/docs/) or
+[view the demo](http://guardian.github.io/guss-webfonts/demo/)
+
 ## Quick start
 
 ### Install the Sass helpers
@@ -155,9 +158,3 @@ in use in this project.
 Thanks to @paulrobertlloyd for his input on the API.
 
 [sassystrings]: https://github.com/HugoGiraudel/SassyStrings
-
-## Contribute
-
-- Edit _webfonts.*.scss files
-- Compile NextGen webfonts styles: `sass nextgen-webfonts.scss:nextgen-webfonts.css --style compressed`
-- Compile demo styles: `sass demo/demo.scss:demo/demo.css`

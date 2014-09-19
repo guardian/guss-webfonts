@@ -3,14 +3,17 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-gh-pages');
+    grunt.loadNpmTasks('grunt-release');
+    grunt.loadNpmTasks('grunt-sassdoc');
     grunt.loadNpmTasks('grunt-scss-lint');
 
     grunt.initConfig({
         fontsVersion: '0.1.0',
 
         clean: {
-            build: [
-                'build'
+            docs: [
+                'docs'
             ],
         },
         scsslint: {
@@ -24,33 +27,43 @@ module.exports = function(grunt) {
             ]
         },
         sass: {
-            buttons: {
+            options: {
+                bundleExec: true
+            },
+            demo: {
                 options: {
-                    style: 'compressed',
-                    bundleExec: true
+                    style: 'expanded',
+                    sourcemap: 'none'
                 },
                 files:  [{
                     expand: true,
-                    cwd: 'src',
+                    cwd: 'demo',
                     src: [
-                        '**/*.scss',
-                        '!**/_*.scss'
+                        '**/*.scss'
                     ],
-                    dest: 'build',
-                    ext: '.min.css'
+                    dest: 'demo',
+                    ext: '.css'
                 }]
             }
         },
+        sassdoc: {
+            webfonts: {
+                src: 'src',
+                dest: 'docs'
+            }
+        },
         aws_s3: {
+            options: {
+                uploadConcurrency: 5,
+                differential: true,
+                displayChangesOnly: true
+            },
             pasteup: {
                 options: {
                     accessKeyId: grunt.option('id'),
                     secretAccessKey: grunt.option('secret'),
                     region: 'eu-west-1',
                     bucket: 'pasteup-prod',
-                    uploadConcurrency: 5,
-                    differential: true,
-                    displayChangesOnly: true,
                     access: '',
                     params: {
                         CacheControl: 'max-age=315360000',
@@ -67,10 +80,35 @@ module.exports = function(grunt) {
                     dest: 'fonts/<%= fontsVersion %>'
                 }]
             }
+        },
+        'gh-pages': {
+            docs: {
+                options: {
+                    base: './',
+                    message: 'Releasing docs to http://guardian.github.io/guss-webfonts/'
+                },
+                src: [
+                    'demo/**/*',
+                    'docs/**/*',
+                ]
+            }
+        },
+        'git-release': {
+            options: {
+                file: 'bower.json',
+                npm: false
+            }
         }
     });
 
     grunt.registerTask('validate', ['scsslint']);
-    grunt.registerTask('build', ['validate', 'clean:build', 'sass']);
+    grunt.registerTask('build:demo', ['sass:demo']);
+    grunt.registerTask('docs', ['clean:docs', 'sassdoc:webfonts']);
+    grunt.registerTask('release', function (type) {
+        var releaseTarget = type ? ':' + type : '';
+        grunt.task.run([
+            'validate', 'git-release' + releaseTarget, 'build:demo', 'docs', 'gh-pages:docs'
+        ]);
+    });
     grunt.registerTask('release:fonts', ['aws_s3:pasteup']);
 };
