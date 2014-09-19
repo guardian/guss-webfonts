@@ -1,9 +1,46 @@
 module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-aws-s3');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-scss-lint');
 
     grunt.initConfig({
         fontsVersion: '0.1.0',
+
+        clean: {
+            build: [
+                'build'
+            ],
+        },
+        scsslint: {
+            options: {
+                bundleExec: true,
+                config: 'scss-lint.yml',
+                reporterOutput: null
+            },
+            webfonts: [
+                'src/**/_*.scss'
+            ]
+        },
+        sass: {
+            buttons: {
+                options: {
+                    style: 'compressed',
+                    bundleExec: true
+                },
+                files:  [{
+                    expand: true,
+                    cwd: 'src',
+                    src: [
+                        '**/*.scss',
+                        '!**/_*.scss'
+                    ],
+                    dest: 'build',
+                    ext: '.min.css'
+                }]
+            }
+        },
         aws_s3: {
             pasteup: {
                 options: {
@@ -33,5 +70,7 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.registerTask('validate', ['scsslint']);
+    grunt.registerTask('build', ['validate', 'clean:build', 'sass']);
     grunt.registerTask('release:fonts', ['aws_s3:pasteup']);
 };
