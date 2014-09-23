@@ -65,7 +65,7 @@ $guss-webfonts-charset: 'original' !default;
  *
  * @group webfonts
  */
-$guss-webfonts-path: '#{$guss-webfonts-version}/hinting-#{$guss-webfonts-hinting}_kerning-#{$guss-webfonts-kerning}/#{$guss-webfonts-charset}/' !default;
+$guss-webfonts-path: '#{$guss-webfonts-version}/hinting-#{$guss-webfonts-hinting}/kerning-#{$guss-webfonts-kerning}/#{$guss-webfonts-charset}/' !default;
 
 
 /**
