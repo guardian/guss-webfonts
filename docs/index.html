@@ -53,8 +53,17 @@
           
           
             <ul class="list-unstyled">
-            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-charset" data-type="variable">
-              <a href="#variable-guss-webfonts-charset">guss-webfonts-charset
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-base-url" data-type="variable">
+              <a href="#variable-guss-webfonts-base-url">guss-webfonts-base-url
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-version" data-type="variable">
+              <a href="#variable-guss-webfonts-version">guss-webfonts-version
               
               
               </a>
@@ -80,17 +89,8 @@
             
           
             
-            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-base-url" data-type="variable">
-              <a href="#variable-guss-webfonts-base-url">guss-webfonts-base-url
-              
-              
-              </a>
-            </li>
-            
-          
-            
-            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-version" data-type="variable">
-              <a href="#variable-guss-webfonts-version">guss-webfonts-version
+            <li class="sidebar__item  sassdoc__item" data-name="guss-webfonts-charset" data-type="variable">
+              <a href="#variable-guss-webfonts-charset">guss-webfonts-charset
               
               
               </a>
@@ -323,12 +323,12 @@
 
               
               
-                <section class="main__item  item" id="variable-guss-webfonts-charset">
+                <section class="main__item  item" id="variable-guss-webfonts-base-url">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#variable-guss-webfonts-charset">guss-webfonts-charset</a>
+  <a class="item__name" href="#variable-guss-webfonts-base-url">guss-webfonts-base-url</a>
 
   
 
@@ -344,7 +344,7 @@
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$guss-webfonts-charset: 'original' !default;</code></pre>
+  <pre class="item__code  language-scss"><code>$guss-webfonts-base-url: './' !default;</code></pre>
 
   
 </div>
@@ -360,12 +360,8 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Charset</p>
-<ul>
-<li>ascii: 256 characters only, very small</li>
-<li>latin1: latin 1 character set</li>
-<li>original: full character set</li>
-</ul>
+  <div class="item__description"><p>Base URL
+URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relative (<code>../</code>)</p>
 </div>
 
 
@@ -409,13 +405,116 @@
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a></li>
+    <li><a href="#mixin-guss-at-font-face"><code>guss-at-font-face</code></a></li>
   
 
 
 
 
 </ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-guss-webfonts-version">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-guss-webfonts-version">guss-webfonts-version</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$guss-webfonts-version: '0.1.0' !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Version of the fonts to use</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
 
 
   
@@ -678,12 +777,12 @@
 
 </section>
               
-                <section class="main__item  item" id="variable-guss-webfonts-base-url">
+                <section class="main__item  item" id="variable-guss-webfonts-charset">
 
 <h3 class="item__heading">
   
 
-  <a class="item__name" href="#variable-guss-webfonts-base-url">guss-webfonts-base-url</a>
+  <a class="item__name" href="#variable-guss-webfonts-charset">guss-webfonts-charset</a>
 
   
 
@@ -699,7 +798,7 @@
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$guss-webfonts-base-url: './' !default;</code></pre>
+  <pre class="item__code  language-scss"><code>$guss-webfonts-charset: 'original' !default;</code></pre>
 
   
 </div>
@@ -715,8 +814,12 @@
     
   <h3 class="item__sub-heading">Description</h3>
 
-  <div class="item__description"><p>Base URL
-URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relative (<code>../</code>)</p>
+  <div class="item__description"><p>Charset</p>
+<ul>
+<li>ascii: 256 characters only, very small</li>
+<li>latin1: latin 1 character set</li>
+<li>original: full character set</li>
+</ul>
 </div>
 
 
@@ -760,116 +863,13 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
       <ul class="list-unstyled  list-inline">
     
 
-    <li><a href="#mixin-guss-at-font-face"><code>guss-at-font-face</code></a></li>
+    <li><a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a></li>
   
 
 
 
 
 </ul>
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-  
-    
-    
-
-  
-
-
-
-</section>
-              
-                <section class="main__item  item" id="variable-guss-webfonts-version">
-
-<h3 class="item__heading">
-  
-
-  <a class="item__name" href="#variable-guss-webfonts-version">guss-webfonts-version</a>
-
-  
-
-  
-</h3>
-
-
-
-
-
-
-
-
-
-<div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$guss-webfonts-version: '0.1.0' !default;</code></pre>
-
-  
-</div>
-
-
-
-
-
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Description</h3>
-
-  <div class="item__description"><p>Version of he fonts to use</p>
-</div>
-
-
-  
-    
-    
-  <h3 class="item__sub-heading">Type</h3>
-
-  <p>
-  
-    <code>String</code>
-  
-  </p>
-
-  
-    
-    
-
-  
-    
-    
-
-
-
-
-  
-    
-    
-
-  
-    
-    
-
-
-
 
 
   
@@ -921,7 +921,7 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$guss-webfonts-path: '#{$guss-webfonts-version}/hinting-#{$guss-webfonts-hinting}_kerning-#{$guss-webfonts-kerning}/#{$guss-webfonts-charset}/' !default;</code></pre>
+  <pre class="item__code  language-scss"><code>$guss-webfonts-path: '#{$guss-webfonts-version}/hinting-#{$guss-webfonts-hinting}/kerning-#{$guss-webfonts-kerning}/#{$guss-webfonts-charset}/' !default;</code></pre>
 
   
 </div>
