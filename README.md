@@ -75,7 +75,7 @@ $guss-webfonts-kerning: 'on';
  *
  * Version of the fonts to use
  */
-$guss-webfonts-kerning: '0.1.0';
+$guss-webfonts-version: '0.1.0';
 
 
 @import 'bower_components/guss-webfonts/src/_webfonts';
