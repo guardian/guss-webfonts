@@ -1,9 +1,9 @@
 {
   "name": "guss-webfonts",
   "description": "Guardian web fonts, for your prototyping needs",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "main": [
-      "src/_webfonts.scss"
+    "src/_webfonts.scss"
   ],
   "ignore": [
     "webfonts"
