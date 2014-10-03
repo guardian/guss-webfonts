@@ -5,9 +5,6 @@
   "main": [
     "src/_webfonts.scss"
   ],
-  "ignore": [
-    "webfonts"
-  ],
   "homepage": "https://github.com/guardian/guss-webfonts",
   "repository": {
     "type": "git",
