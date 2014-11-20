@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Guardian Web Fonts</title>
     <link rel="stylesheet" href="demo.css" />
-    <link id="font-css" rel="stylesheet" href="hinting-on-kerning-on.css" />
+    <link id="font-css" rel="stylesheet" href="hinting-on-kerning-on-original.css" />
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
@@ -13,22 +13,38 @@
     <form id="font-type">
         <label>
             Hinting
-            <input name="hinting" type="checkbox" checked="checked">
+            <input name="hinting" type="checkbox" checked>
         </label>
         <label>
             Kerning
-            <input name="kerning" type="checkbox" checked="checked">
+            <input name="kerning" type="checkbox" checked>
+        </label>
+        <label>
+            Charset
+            <select>
+                <option value="original" selected>Original</option>
+                <option value="latin1">Latin 1</option>
+                <option value="ascii">ASCII</option>
+            </select>
         </label>
     </form>
     <script type="text/javascript">
         var fontTypeStates = {
-            hinting: 'on',
-            kerning: 'on'
-        };
+                hinting: 'on',
+                kerning: 'on',
+                charset: 'original'
+            },
+            updateCss = function () {
+                $('#font-css').attr('href', 'hinting-' + fontTypeStates.hinting + '-kerning-' + fontTypeStates.kerning + '-' + fontTypeStates.charset + '.css')
+            };
         $('#font-type').on('change', 'input', function (e) {
             var input = e.target;
             fontTypeStates[input.name] = input.checked ? 'on' : 'off';
-            $('#font-css').attr('href', 'hinting-' + fontTypeStates.hinting + '-kerning-' + fontTypeStates.kerning + '.css')
+            updateCss();
+        });
+        $('#font-type').on('change', 'select', function (e) {
+            fontTypeStates.charset = $(e.target).val();
+            updateCss();
         });
     </script>
     <div class="family-GuardianAgateSans1Web">
