@@ -1,0 +1,7 @@
+$guss-webfonts-base-url: '//pasteup.guim.co.uk/fonts/';
+
+@import '../src/_webfonts';
+
+$guss-webfonts-kerning: 'off';
+
+@include guss-webfonts();

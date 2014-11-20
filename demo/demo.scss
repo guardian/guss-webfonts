@@ -1,8 +1,4 @@
-$guss-webfonts-base-url: '//pasteup.guim.co.uk/fonts/';
-
 @import '../src/_webfonts';
-
-@include guss-webfonts();
 
 @mixin font-family-helper-classes {
     $current-font: null;
@@ -44,18 +40,15 @@ h1 {
     font-family: 'Guardian Titlepiece Web';
 }
 
-h2,
-h3 {
-    font-family: 'Guardian Egyptian Web';
-    font-weight: 200;
-}
 h2 {
     border-top: 2px solid #dfdfdf;
     padding-top: 4px;
+    font-weight: 200;
 }
 h3 {
     margin-top: 2em;
     margin-bottom: .5em;
+    font-weight: inherit;
 }
 
 @include font-family-helper-classes;
