@@ -126,9 +126,9 @@
  *
  * @group webfonts
  */
-@function compose-webfont-path($font-family) {
+@function compose-webfont-path($font-family, $base-path: $guss-webfonts-path) {
     $directory: if(is-extra($font-family), $guss-extras-directory, str-remove-white-space($font-family));
-    $path: $guss-webfonts-path + $directory + '/';
+    $path: $base-path + $directory + '/';
 
     @return $path;
 }
