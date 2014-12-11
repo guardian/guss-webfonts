@@ -616,21 +616,6 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
 
 
 
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a></li>
-  
-
-
-
-
-</ul>
 
 
   
@@ -732,21 +717,6 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
 
 
 
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a></li>
-  
-
-
-
-
-</ul>
 
 
   
@@ -855,21 +825,6 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
 
 
 
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a></li>
-  
-
-
-
-
-</ul>
 
 
   
@@ -921,7 +876,7 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$guss-webfonts-path: '#{$guss-webfonts-version}/hinting-#{$guss-webfonts-hinting}/kerning-#{$guss-webfonts-kerning}/#{$guss-webfonts-charset}/' !default;</code></pre>
+  <pre class="item__code  language-scss"><code>$guss-webfonts-path: false !default;</code></pre>
 
   
 </div>
@@ -961,51 +916,6 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
     
 
 
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    
-      <li>
-        <a href="#variable-guss-webfonts-charset"><code>guss-webfonts-charset</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-    
-
-    
-      <li>
-        <a href="#variable-guss-webfonts-hinting"><code>guss-webfonts-hinting</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-    
-
-    
-      <li>
-        <a href="#variable-guss-webfonts-kerning"><code>guss-webfonts-kerning</code></a>
-        
-      </li>
-    
-  
-
-
-
-
-</ul>
 
 
   
@@ -1018,21 +928,6 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
 
 
 
-  
-
-    
-      
-      <h3 class="item__sub-heading">Used by</h3>
-      <ul class="list-unstyled  list-inline">
-    
-
-    <li><a href="#function-compose-webfont-path"><code>compose-webfont-path</code></a></li>
-  
-
-
-
-
-</ul>
 
 
   
@@ -2922,17 +2817,29 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
     
   
 
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
 
 <div class="relative  clear  code--collapsed">
   <pre class="item__code  item__code--togglable  language-scss"
     data-current-state="collapsed"
-    data-expanded="@function compose-webfont-path($font-family) { 
+    data-expanded="@function compose-webfont-path($font-family, $base-path: $guss-webfonts-path) { 
     $directory: if(is-extra($font-family), $guss-extras-directory, str-remove-white-space($font-family));
-    $path: $guss-webfonts-path + $directory + &#39;/&#39;;
+    $path: $base-path + $directory + &#39;/&#39;;
 
     @return $path;
  }"
-    data-collapsed="@function compose-webfont-path($font-family) { ... }"><code>@function compose-webfont-path($font-family) { ... }</code></pre>
+    data-collapsed="@function compose-webfont-path($font-family, $base-path: $guss-webfonts-path) { ... }"><code>@function compose-webfont-path($font-family, $base-path: $guss-webfonts-path) { ... }</code></pre>
 
   
 </div>
@@ -2986,6 +2893,22 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
           </td>
         </tr>
       
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$base-path</code></th>
+          <td data-label="desc"><p>base path of where to look for this font</p>
+</td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$guss-webfonts-path</code>
+          
+          </td>
+        </tr>
+      
     </tbody>
   </table>
 
@@ -3027,19 +2950,6 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
     
       <li>
         <a href="#variable-guss-extras-directory"><code>guss-extras-directory</code></a>
-        
-      </li>
-    
-  
-
-
-
-  
-    
-
-    
-      <li>
-        <a href="#variable-guss-webfonts-path"><code>guss-webfonts-path</code></a>
         
       </li>
     
@@ -3709,8 +3619,14 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
     $font-weight-override: map-get($overrides, weight);
     $font-style-override: map-get($overrides, style);
 
+    $version:   if(map-has-key($properties, version), map-get($properties, version), $guss-webfonts-version);
+    $hinting:   if(map-has-key($properties, hinting), map-get($properties, hinting), $guss-webfonts-hinting);
+    $kerning:   if(map-has-key($properties, kerning), map-get($properties, kerning), $guss-webfonts-kerning);
+    $charset:   if(map-has-key($properties, charset), map-get($properties, charset), $guss-webfonts-charset);
+    $base-path: if($guss-webfonts-path, $guss-webfonts-path, &#39;#{$version}/hinting-#{$hinting}/kerning-#{$kerning}/#{$charset}/&#39;);
+
     $font-filename: compose-webfont-filename($font-family, map-get($properties, weight), map-get($properties, style));
-    $full-path: compose-webfont-path($font-family);
+    $full-path: compose-webfont-path($font-family, $base-path);
     $font-weight: guss-font-weight(if($font-weight-override, $font-weight-override, map-get($properties, weight)));
     $font-style: if($font-style-override, $font-style-override, map-get($properties, style));
 
@@ -3776,7 +3692,7 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$properties</code></th>
-          <td data-label="desc"><p>weight (member of <code>$guss-font-weights</code>), style (<code>normal</code> | <code>italic</code>)</p>
+          <td data-label="desc"><p>weight (member of <code>$guss-font-weights</code>), style (<code>normal</code> | <code>italic</code>), version, hinting, kerning, charset</p>
 </td>
           <td data-label="type">
           

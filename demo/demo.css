@@ -47,10 +47,6 @@
 /**
  * Complete path
  *
- * @requires {variable} guss-webfonts-charset
- * @requires {variable} guss-webfonts-hinting
- * @requires {variable} guss-webfonts-kerning
- *
  * @type String
  *
  * @group webfonts
@@ -165,9 +161,9 @@
  * "Extra" fonts are stored in `$guss-extras-directory`.
  *
  * @param {String} $font-family - font name
+ * @param {String} $base-path ($guss-webfonts-path) - base path of where to look for this font
  *
  * @requires {variable} guss-extras-directory
- * @requires {variable} guss-webfonts-path
  * @requires {function} str-remove-white-space
  *
  * @return {String} - Path to the font
@@ -202,7 +198,7 @@
  * Output the @font-face declaration for a Guss webfont.
  *
  * @param {Number} $font-family - ID of the font in $guss-webfonts
- * @param {Map} $properties - weight (member of `$guss-font-weights`), style (`normal` | `italic`)
+ * @param {Map} $properties - weight (member of `$guss-font-weights`), style (`normal` | `italic`), version, hinting, kerning, charset
  * @param {Map} $overrides - weight (member of `$guss-font-weights`), style (`normal` | `italic`)
  *
  * @requires {variable} guss-webfonts
