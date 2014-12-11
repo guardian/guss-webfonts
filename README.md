@@ -107,23 +107,23 @@ You can curate your own list of @font-face rules like so:
     (
         'Guardian Agate Sans 1 Web': (
             (weight: 'regular', style: 'normal'),
-            (weight: 'bold',    style: 'normal'),
+            (weight: 'bold',    style: 'normal', charset: 'original'),
         ),
         'Guardian Text Egyptian Web': (
             (weight: 'regular',  style: 'normal'),
             (weight: 'regular',  style: 'italic'),
-            (weight: 'medium',   style: 'normal', use-as: (weight: 'bold', style: 'normal')),
-            (weight: 'medium',   style: 'italic', use-as: (weight: 'bold', style: 'italic')),
+            (weight: 'medium',   style: 'normal', version: '0.2.0', use-as: (weight: 'bold')),
+            (weight: 'medium',   style: 'italic', hinting: 'off', use-as: (weight: 'bold', style: 'normal')),
         ),
         'Guardian Egyptian Web': (
-            (weight: 'light',    style: 'normal'),
+            (weight: 'light',    style: 'normal', kerning: 'off'),
             (weight: 'regular',  style: 'normal'),
-            (weight: 'semibold', style: 'normal', use-as: (weight: 'ultrablack', style: 'normal')),
+            (weight: 'semibold', style: 'normal', use-as: (weight: 'ultrablack')),
         ),
         'Guardian Text Sans Web': (
             (weight: 'regular',  style: 'normal'),
             (weight: 'regular',  style: 'italic'),
-            (weight: 'medium',   style: 'normal', use-as: (weight: 'bold', style: 'normal')),
+            (weight: 'medium',   style: 'normal', use-as: (weight: 'bold')),
             (weight: 'medium',   style: 'italic', use-as: (weight: 'bold', style: 'italic')),
         ),
         'Guardian Sans Web': (
