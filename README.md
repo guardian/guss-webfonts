@@ -133,6 +133,53 @@ You can curate your own list of @font-face rules like so:
 );
 ```
 
+## Development
+
+You will need
+
+ * [Node.js](http://nodejs.org/)
+ * [Ruby](https://www.ruby-lang.org/en/)
+ * [Bundler](http://bundler.io/)
+```
+$ gem install bundler
+```
+ * [Grunt CLI](http://gruntjs.com/getting-started#installing-the-cli)
+```
+$ npm install -g grunt-cli
+```
+
+Then, in root, install the dependecies
+
+```
+$ bundle install
+$ npm install
+$ bower install
+```
+
+To build the component
+
+```
+$ grunt build:demo
+```
+
+To build the docs (output to the `docs` dir)
+
+```
+$ grunt docs
+```
+
+To release the component
+
+```
+$ grunt release
+```
+
+By default a patch release. Also `major` and `minor` targets available, e.g.
+
+```
+$ grunt release:minor
+```
+
 ## Uploading fonts
 
 Update the version number in the [Gruntfile](Gruntfile.js#L13). Then
