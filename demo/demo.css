@@ -284,6 +284,10 @@ h3 {
   font-family: "Guardian Weekend Cond Web";
 }
 
+.family-GuardianHeadline {
+  font-family: "Guardian Headline";
+}
+
 .weight-thin {
   font-weight: 100;
 }

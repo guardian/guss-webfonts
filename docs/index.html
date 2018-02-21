@@ -1418,7 +1418,7 @@
     $weight: str-capitalise($weight);
     $font: str-remove-white-space($font-family);
 
-    $filename: $font + &#39;-&#39; + $weight + $style;
+    $filename: &#39;#{$font}-#{$weight}#{$style}&#39;;
 
     @return $filename;
  }"
@@ -3184,7 +3184,7 @@ URL can be an absolute HTTP (<code>//pasteup.guim.co.uk/fonts/</code>) or relati
 
 
 <div class="relative  clear">
-  <pre class="item__code  language-scss"><code>$guss-webfonts-version: &#39;1.0.0&#39; !default;</code></pre>
+  <pre class="item__code  language-scss"><code>$guss-webfonts-version: &#39;2.0.0&#39; !default;</code></pre>
 
   
 </div>
@@ -4193,6 +4193,20 @@ font-smoothing disabled (the default in XP pre-servicepack 1)</li>
     ),
     &#39;Guardian Weekend Cond Web&#39;: (
         (weight: &#39;black&#39;, style: &#39;normal&#39;),
+    ),
+    &#39;Guardian Headline&#39;: (
+        (weight: &#39;black&#39;, style: &#39;normal&#39;),
+        (weight: &#39;black&#39;, style: &#39;italic&#39;),
+        (weight: &#39;bold&#39;, style: &#39;normal&#39;),
+        (weight: &#39;bold&#39;, style: &#39;italic&#39;),
+        (weight: &#39;light&#39;, style: &#39;normal&#39;),
+        (weight: &#39;light&#39;, style: &#39;italic&#39;),
+        (weight: &#39;medium&#39;, style: &#39;normal&#39;),
+        (weight: &#39;medium&#39;, style: &#39;italic&#39;),
+        (weight: &#39;regular&#39;, style: &#39;normal&#39;),
+        (weight: &#39;regular&#39;, style: &#39;italic&#39;),
+        (weight: &#39;semibold&#39;, style: &#39;normal&#39;),
+        (weight: &#39;semibold&#39;, style: &#39;italic&#39;)
     )
 ) !default;</code></pre>
 
