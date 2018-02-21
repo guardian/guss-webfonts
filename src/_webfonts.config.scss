@@ -15,7 +15,7 @@ $guss-webfonts-base-url: './' !default;
  *
  * @group webfonts
  */
-$guss-webfonts-version: '1.0.0' !default;
+$guss-webfonts-version: '2.0.1' !default;
 
 /**
  * Hinting
@@ -170,5 +170,19 @@ $guss-webfonts: (
     ),
     'Guardian Weekend Cond Web': (
         (weight: 'black', style: 'normal'),
+    ),
+    'Guardian Headline': (
+        (weight: 'black', style: 'normal'),
+        (weight: 'black', style: 'italic'),
+        (weight: 'bold', style: 'normal'),
+        (weight: 'bold', style: 'italic'),
+        (weight: 'light', style: 'normal'),
+        (weight: 'light', style: 'italic'),
+        (weight: 'medium', style: 'normal'),
+        (weight: 'medium', style: 'italic'),
+        (weight: 'regular', style: 'normal'),
+        (weight: 'regular', style: 'italic'),
+        (weight: 'semibold', style: 'normal'),
+        (weight: 'semibold', style: 'italic')
     )
 ) !default;

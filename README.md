@@ -58,7 +58,7 @@ $guss-webfonts-charset: 'original';
  * Hinting
  *
  * - cleartype: larger file, better rendering in Windows
- * - auto: even larger file, better rendering in Windows in Chrome with 
+ * - auto: even larger file, better rendering in Windows in Chrome with
  *   font-smoothing disabled (the default in XP pre-servicepack 1)
  * - off: smaller files, render well on HiDPI displays
  */
@@ -187,7 +187,7 @@ $ grunt release:minor
 Update the version number in the [Gruntfile](Gruntfile.js#L13). Then
 
 ```
-$ grunt release:fonts --id=AWS_ACCESS_KEY --secret=AWS_SECRET_KEY
+$ grunt release:fonts --id=AWS_ACCESS_KEY --secret=AWS_SECRET_KEY --sessionToken=AWS_SESSION_TOKEN
 ```
 
 ## Acknowledgements
