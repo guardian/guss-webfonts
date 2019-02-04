@@ -1,3 +1,15 @@
+# DEPRECATED
+
+This repo is archived for the time being.
+
+To use webfonts in your project import them from pasteup like so
+
+```
+https://pasteup.guim.co.uk/webfonts/1.0.0/noalts-not-hinted/GHGuardianHeadline-Black.woff
+```
+
+`webfonts/1.0.0` follows the structure of `webfonts`
+
 # Guss Webfonts
 
 Guardian Webfonts for your prototyping needs.
@@ -79,7 +91,6 @@ $guss-webfonts-kerning: 'on';
  */
 $guss-webfonts-version: '0.1.0';
 
-
 @import 'bower_components/guss-webfonts/src/_webfonts';
 ```
 
@@ -106,32 +117,66 @@ You can curate your own list of @font-face rules like so:
 
 // For Guardian Next Gen products, we use this configuration:
 @include guss-webfonts(
-    (
-        'Guardian Agate Sans 1 Web': (
-            (weight: 'regular', style: 'normal'),
-            (weight: 'bold',    style: 'normal', charset: 'original'),
-        ),
-        'Guardian Text Egyptian Web': (
-            (weight: 'regular',  style: 'normal'),
-            (weight: 'regular',  style: 'italic'),
-            (weight: 'medium',   style: 'normal', version: '0.2.0', use-as: (weight: 'bold')),
-            (weight: 'medium',   style: 'italic', hinting: 'off', use-as: (weight: 'bold', style: 'normal')),
-        ),
-        'Guardian Egyptian Web': (
-            (weight: 'light',    style: 'normal', kerning: 'off'),
-            (weight: 'regular',  style: 'normal'),
-            (weight: 'semibold', style: 'normal', use-as: (weight: 'ultrablack')),
-        ),
-        'Guardian Text Sans Web': (
-            (weight: 'regular',  style: 'normal'),
-            (weight: 'regular',  style: 'italic'),
-            (weight: 'medium',   style: 'normal', use-as: (weight: 'bold')),
-            (weight: 'medium',   style: 'italic', use-as: (weight: 'bold', style: 'italic')),
-        ),
-        'Guardian Sans Web': (
-            (weight: 'regular',  style: 'normal'),
-        )
-    )
+	(
+		'Guardian Agate Sans 1 Web': (
+			(weight: 'regular', style: 'normal'),
+			(weight: 'bold', style: 'normal', charset: 'original'),
+		),
+		'Guardian Text Egyptian Web': (
+			(weight: 'regular', style: 'normal'),
+			(weight: 'regular', style: 'italic'),
+			(
+				weight: 'medium',
+				style: 'normal',
+				version: '0.2.0',
+				use-as: (
+					weight: 'bold',
+				)
+			),
+			(
+				weight: 'medium',
+				style: 'italic',
+				hinting: 'off',
+				use-as: (
+					weight: 'bold',
+					style: 'normal',
+				)
+			),
+		),
+		'Guardian Egyptian Web': (
+			(weight: 'light', style: 'normal', kerning: 'off'),
+			(weight: 'regular', style: 'normal'),
+			(
+				weight: 'semibold',
+				style: 'normal',
+				use-as: (
+					weight: 'ultrablack',
+				)
+			),
+		),
+		'Guardian Text Sans Web': (
+			(weight: 'regular', style: 'normal'),
+			(weight: 'regular', style: 'italic'),
+			(
+				weight: 'medium',
+				style: 'normal',
+				use-as: (
+					weight: 'bold',
+				)
+			),
+			(
+				weight: 'medium',
+				style: 'italic',
+				use-as: (
+					weight: 'bold',
+					style: 'italic',
+				)
+			),
+		),
+		'Guardian Sans Web': (
+			(weight: 'regular', style: 'normal'),
+		),
+	)
 );
 ```
 
@@ -139,13 +184,16 @@ You can curate your own list of @font-face rules like so:
 
 You will need
 
- * [Node.js](http://nodejs.org/)
- * [Ruby](https://www.ruby-lang.org/en/)
- * [Bundler](http://bundler.io/)
+- [Node.js](http://nodejs.org/)
+- [Ruby](https://www.ruby-lang.org/en/)
+- [Bundler](http://bundler.io/)
+
 ```
 $ gem install bundler
 ```
- * [Grunt CLI](http://gruntjs.com/getting-started#installing-the-cli)
+
+- [Grunt CLI](http://gruntjs.com/getting-started#installing-the-cli)
+
 ```
 $ npm install -g grunt-cli
 ```
