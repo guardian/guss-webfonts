@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 	grunt.task.renameTask('release', 'git-release');
 
 	grunt.initConfig({
-		fontsVersion: '1.0.0@test',
+		fontsVersion: '1.0.0',
 		aws_s3: {
 			options: {
 				uploadConcurrency: 5,

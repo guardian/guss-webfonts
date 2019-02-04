@@ -1,0 +1,99 @@
+$gu-gt-fonts-url: '//pasteup.guim.co.uk/webfonts/1.0.0';
+$gu-gt-font-variant: 'noalts-not-hinted';
+
+@function gu-font-src($filename) {
+	@return url('#{$gu-gt-fonts-url + '/' + $gu-gt-font-variant + '/' + $filename}.woff2')
+			format('woff2'),
+		url('#{$gu-gt-fonts-url + '/' + $gu-gt-font-variant + '/' + $filename}.woff')
+			format('woff'),
+		url('#{$gu-gt-fonts-url + '/' + $gu-gt-font-variant + '/' + $filename}.ttf')
+			format('ttf');
+}
+
+@mixin gu-font-face($family, $src, $weight: 400, $italic: false) {
+	@at-root {
+		@font-face {
+			font-family: $family;
+			src: gu-font-src($src);
+			font-weight: $weight;
+			@if ($italic) {
+				font-style: italic;
+			}
+		}
+	}
+}
+
+// Egyptian
+@mixin gu-font-face-text-egyptian($alt, $weight, $italic: false) {
+	@include gu-font-face(
+		$family: 'Guardian Text Egyptian Web',
+		$src: 'GuardianTextEgyptian-' + $alt,
+		$weight: $weight,
+		$italic: $italic
+	);
+}
+
+@include gu-font-face-text-egyptian(
+	$alt: 'Regular',
+	$weight: 400,
+	$italic: false
+);
+@include gu-font-face-text-egyptian(
+	$alt: 'RegularItalic',
+	$weight: 400,
+	$italic: true
+);
+@include gu-font-face-text-egyptian(
+	$alt: 'Medium',
+	$weight: 600,
+	$italic: false
+);
+
+// Headline
+@mixin gu-font-face-headline($alt, $weight, $italic: false) {
+	@include gu-font-face(
+		$family: 'Guardian Headline',
+		$src: 'GHGuardianHeadline-' + $alt,
+		$weight: $weight,
+		$italic: $italic
+	);
+}
+
+@include gu-font-face-headline($alt: 'Light', $weight: 200, $italic: false);
+@include gu-font-face-headline(
+	$alt: 'LightItalic',
+	$weight: 200,
+	$italic: true
+);
+@include gu-font-face-headline($alt: 'Regular', $weight: 400, $italic: false);
+@include gu-font-face-headline(
+	$alt: 'RegularItalic',
+	$weight: 400,
+	$italic: true
+);
+@include gu-font-face-headline($alt: 'Semibold', $weight: 500, $italic: false);
+@include gu-font-face-headline($alt: 'Bold', $weight: 900, $italic: false);
+
+// Sans
+@mixin gu-font-face-text-sans($alt, $weight, $italic: false) {
+	@include gu-font-face(
+		$family: 'Guardian Text Sans Web',
+		$src: 'GuardianTextSans-' + $alt,
+		$weight: $weight,
+		$italic: $italic
+	);
+}
+@include gu-font-face-text-sans($alt: 'Regular', $weight: 400, $italic: false);
+@include gu-font-face-text-sans(
+	$alt: 'RegularItalic',
+	$weight: 400,
+	$italic: true
+);
+@include gu-font-face-text-sans($alt: 'Medium', $weight: 600, $italic: false);
+
+// Titlepiece
+@font-face {
+	font-family: 'GT Guardian Titlepiece';
+	src: gu-font-src('GTGuardianTitlepiece-Bold');
+	font-weight: 400;
+}

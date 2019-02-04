@@ -1,13 +1,3 @@
-This repo is archived for the time being.
-
-To use webfonts in your project import them from pasteup like so
-
-```
-https://pasteup.guim.co.uk/webfonts/1.0.0/noalts-not-hinted/GHGuardianHeadline-Black.woff
-```
-
-`webfonts/1.0.0` follows the directory structure of `/webfonts` here
-
 # Guss Webfonts
 
 Guardian Webfonts for your prototyping needs.
