@@ -21,4 +21,4 @@ Replace the fonts in this repo, bump up the version in `Gruntfile.js`, then run
 $ grunt release:fonts --id=AWS_ACCESS_KEY --secret=AWS_SECRET_KEY --session=AWS_SESSION_TOKEN
 ```
 
-Using Janus credentials.
+Using Janus credentials for Websys
